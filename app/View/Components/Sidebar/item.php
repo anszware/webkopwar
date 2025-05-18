@@ -11,9 +11,15 @@ class item extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+     public $href;
+    public $icon;
+    public $active;
+
+    public function __construct($href, $icon = null)
     {
-        //
+        $this->href = $href;
+        $this->icon = $icon;
+        $this->active = request()->is(ltrim($href, '/'));
     }
 
     /**

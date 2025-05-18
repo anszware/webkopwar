@@ -3,8 +3,6 @@
 @endsection
 @section('script')
     <script src="{{ asset('dist/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('dist/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('dist/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
 @endsection
 <div class="container-fluid mw-100">
     <!--  Owl carousel -->
