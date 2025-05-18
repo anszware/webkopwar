@@ -5,8 +5,10 @@ namespace App\Livewire\Auth;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Title;
+use Livewire\Attributes\Layout;
 
 #[Title('Login')]
+#[Layout('layouts.auth')]
 /**
  * Login Component
  *
@@ -31,7 +33,7 @@ class Login extends Component
             session()->regenerate();
 
             $user = Auth::user();
-            return redirect()->to($user->role === 'petugas' ? '/dashboard/petugas' : '/dashboard/anggota');
+            return redirect()->to('/');
         }
 
         $this->addError('email', 'Email atau password salah.');
